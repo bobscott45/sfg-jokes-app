@@ -4,11 +4,11 @@ import guru.springframework.norris.chuck.ChuckNorrisQuotes;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ChuckNorrisQuote implements RandomQuote{
+public class ChuckNorrisQuoteGenerator implements RandomQuoteGenerator {
 
     private ChuckNorrisQuotes chuckNorrisQuotes;
 
-    public ChuckNorrisQuote() {
+    public ChuckNorrisQuoteGenerator() {
         this.chuckNorrisQuotes = new ChuckNorrisQuotes();
     }
 

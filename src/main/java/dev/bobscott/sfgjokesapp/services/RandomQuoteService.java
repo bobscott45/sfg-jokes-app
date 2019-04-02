@@ -1,19 +1,19 @@
 package dev.bobscott.sfgjokesapp.services;
 
-import dev.bobscott.sfgjokesapp.components.RandomQuote;
+import dev.bobscott.sfgjokesapp.components.RandomQuoteGenerator;
 import org.springframework.stereotype.Service;
 
 @Service
 public class RandomQuoteService implements QuoteService {
 
-    private RandomQuote randomQuote;
+    private RandomQuoteGenerator randomQuoteGenerator;
 
-    public RandomQuoteService(RandomQuote randomQuote) {
-        this.randomQuote = randomQuote;
+    public RandomQuoteService(RandomQuoteGenerator randomQuoteGenerator) {
+        this.randomQuoteGenerator = randomQuoteGenerator;
     }
 
     @Override
     public String getQuote() {
-        return randomQuote.getRandomQuote();
+        return randomQuoteGenerator.getRandomQuote();
     }
 }
