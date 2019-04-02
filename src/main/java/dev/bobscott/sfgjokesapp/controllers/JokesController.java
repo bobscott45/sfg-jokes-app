@@ -9,8 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class JokesController {
 
-    @Autowired
+
     private QuoteService quoteService;
+
+    public JokesController(QuoteService quoteService) {
+        this.quoteService = quoteService;
+    }
 
     @RequestMapping("/")
     public String getJoke(Model model) {
